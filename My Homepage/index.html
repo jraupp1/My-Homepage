@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
 <!--
 	Things to do...
-	1. about me::: add a picture
-	2. about me::: finish the paragraph
-	3. about me::: add an instagram, linkedin, wechat widgets
-	4. contact::: create bucket for inquires
-	5. education::: add gradutation picture
-	6. experience::: add my speaking pciture from CDTC
+
+	about me::: add a picture
+	contact::: php email for inquires
+	translate webpage
+	add wechat icon and link
 -->
 <html>
 	<head>
@@ -30,6 +29,7 @@
 							<div class="inner">
 								<h1>Jeremy Raupp</h1>
 								<p>Responsive Resume</p>
+
 							</div>
 						</div>
 						<nav>
@@ -63,7 +63,7 @@
 															<span class="image main"><img src="images/Work Pic.jpg" alt="" /></span>
 																</div>
 															<p><center>That which you most want to find, will be found where you least want to look.</center></p>
-															<p align="right">- Karl Yung</p><br>
+															<p align="right">- Carl Jung</p><br>
 
 															<div class="table-wrapper">
 																<table>
@@ -105,8 +105,8 @@
 							<article id="Education">
 								<h2 class="major">Education</h2>
 								<span class="image main"><img src="images/Grad Pic.jpg" alt="" /></span>
-								<p><center>Live as if you were to die tomorrow. Learn as if you were to live forever.</center></p>
-								<p align="right">- Mahatma Gandhi</p><br>
+								<p><center>If things are not failing, you are not innovating.</center></p>
+								<p align="right">- Elon Musk</p><br>
 
 								<section>
 									<div class="table-wrapper">
@@ -121,7 +121,7 @@
 											<tbody>
 												<tr>
 													<td><a href="https://aws.amazon.com/training/"target="_blank" rel="noopener noreferrer">AWS Training and Certification</td>
-													<td>Self-study for AWS Certifications and Devops technologies.</td>
+													<td>Self-study for AWS Certifications and DevOps technologies.</td>
 													<td>September 2019 - Present</td>
 												</tr>
 												<tr>
@@ -146,7 +146,7 @@
 						<!-- Contact -->
 							<article id="Contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
+								<form method="post" action="contact.php">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -162,15 +162,27 @@
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="submit" value="Send Message" class="primary"
+
+											<?php
+											$to_email = 'jeremyraupp@gmail.com';
+											$name = 'Testing PHP Mail';
+											$email = 'From: noreply @ company . com';
+											$message = 'This mail is sent using the PHP mail function';
+											mail($to_email,$name,$email,$message);
+											?>
+
+
+
+
+											</li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.instagram.com/jeremyraupp/""target="_blank" rel="noopener noreferrer" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/jraupp1"target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
 
@@ -181,13 +193,17 @@
 
 
 
-
-
-
-
-
-
 						<!-- Elements -->
+
+
+
+
+
+
+
+
+
+
 							<article id="elements">
 								<h2 class="major">Elements</h2>
 
@@ -234,15 +250,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<li>Felis enim feugiat.</li>
 									</ul>
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
 									<h4>Icons</h4>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -260,101 +267,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<li><a href="#" class="button primary">Default</a></li>
 										<li><a href="#" class="button">Default</a></li>
 									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
 								</section>
 
 								<section>
@@ -431,9 +343,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 					</div>
 
+
+
+
+
 				<!-- Footer -->
+
+
 					<footer id="footer">
-						<p class="copyright">Hosted on: Amazon Web Services</p>
+						<a href="#Chinese">Resume in Mandarin</a><br>
+
+						<br><p class="copyright">Hosted on: Amazon Web Services</p>
 						<p class="copyright">Bootstrap: HTML5 UP</p>
 					</footer>
 
